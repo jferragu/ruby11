@@ -7,7 +7,19 @@ module FunWithStrings
   
   def count_words
     # your code here
+    theString = self.downcase.gsub(/(\W|\d)/, " ")
+    newStringArray = theString.split
+    hashMap = Hash.new
+    newStringArray.each do |i|
+      if hashMap[i]==nil
+        hashMap[i] = 1
+      else
+        hashMap[i] +=1
+      end
+    end
+    return hashMap
   end
+  
   def anagram_groups
     # your code here
   end
