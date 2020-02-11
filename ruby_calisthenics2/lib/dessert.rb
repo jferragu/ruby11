@@ -14,11 +14,17 @@ class Dessert
   def delicious?
     return true
   end
-end
+end  
 
 class JellyBean < Dessert
   # add code for setters and getters
+  #attr_accessor :name 
+  #attr_accessor :calories
+  attr_accessor :flavor
   def initialize(flavor)
     # your code here
+    @flavor = flavor
+    @name = @flavor + " jelly bean"
+    @calories = 5
   end
 end
