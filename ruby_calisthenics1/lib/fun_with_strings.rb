@@ -1,12 +1,9 @@
 module FunWithStrings
   def palindrome?
-    # your code here
-
     return self.downcase.gsub(/(\W|\d)/, "") == self.downcase.reverse.gsub(/(\W|\d)/, "")
   end
   
   def count_words
-    # your code here
     theString = self.downcase.gsub(/(\W|\d)/, " ")
     newStringArray = theString.split
     hashMap = Hash.new
@@ -21,7 +18,8 @@ module FunWithStrings
   end
   
   def anagram_groups
-    # your code here
+    arrayOfWords = self.split
+    return arrayOfWords.group_by{|w| w.each_char.sort}.values
   end
 end
 
